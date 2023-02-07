@@ -31,5 +31,7 @@ jobs:
         run: npm run test:browser
       - name: Test (Edge)
         run: npm run test:edge
-      - name: Test Build
+      - name: Test (Build)
         run: npm run build
+      - name: Show /dist contents
+        run: find ./dist | sed -e "s/[^-][^\/]*\// |/g" -e "s/|\([^ ]\)/|-\1/"
