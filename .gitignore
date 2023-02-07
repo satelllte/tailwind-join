@@ -1,0 +1,5 @@
+# Node.js external dependencies
+node_modules
+
+# Build files
+dist
