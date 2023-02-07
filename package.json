@@ -1,6 +1,6 @@
 {
   "name": "tailwind-join",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A tiny utility to join Tailwind classes",
   "keywords": [
     "tailwind-join",
@@ -29,9 +29,15 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:node": "vitest run --coverage --environment=node",
+    "test:browser": "vitest run --coverage --environment=jsdom",
+    "test:edge": "vitest run --coverage --environment=edge-runtime"
   },
   "devDependencies": {
-    "typescript": "4.9.5"
+    "@edge-runtime/vm": "2.0.4",
+    "@vitest/coverage-c8": "0.28.4",
+    "jsdom": "21.1.0",
+    "typescript": "4.9.5",
+    "vitest": "0.28.4"
   }
 }
