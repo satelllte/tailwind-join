@@ -25,7 +25,11 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
-      - name: Test
-        run: npm run test
+      - name: Test (Node)
+        run: npm run test:node
+      - name: Test (Browser)
+        run: npm run test:browser
+      - name: Test (Edge)
+        run: npm run test:edge
       - name: Test Build
         run: npm run build

@@ -29,10 +29,14 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "vitest run --coverage"
+    "test:node": "vitest run --coverage --environment=node",
+    "test:browser": "vitest run --coverage --environment=jsdom",
+    "test:edge": "vitest run --coverage --environment=edge-runtime"
   },
   "devDependencies": {
+    "@edge-runtime/vm": "2.0.4",
     "@vitest/coverage-c8": "0.28.4",
+    "jsdom": "21.1.0",
     "typescript": "4.9.5",
     "vitest": "0.28.4"
   }
