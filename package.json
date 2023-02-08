@@ -22,9 +22,6 @@
   "bugs": {
     "url": "https://github.com/satelllte/tailwind-join/issues"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
