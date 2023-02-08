@@ -49,12 +49,24 @@ twJoin(
 
 ### What is the difference between `tailwind-join` and other utilities like [classnames](https://www.npmjs.com/package/classnames), [clsx](https://www.npmjs.com/package/clsx)?
 
-> `tailwind-join` just focuses more on solving the Tailwind classes "hell" issue when tens of classes are placed into a single line. On the other hand, it has even smaller bundle size than `classnames` and `clsx` so it can be also intensively used for building classes conditionally using only "ternary" and "logical conjunction" operators approaches described above.
+`tailwind-join` just focuses more on solving the Tailwind classes "hell" issue when tens of classes are placed into a single line. On the other hand, it has even smaller bundle size than `classnames` and `clsx` so it can be also intensively used for building classes conditionally using only "ternary" and "logical conjunction" operators approaches described above.
 
 ### Can `tailwind-join` be used for non-Tailwind classes?
 
-> Absolutely! `tailwind-join` doesn't know anything about Tailwind, it only solves the "single line classes" issue.
+Absolutely! `tailwind-join` doesn't know anything about Tailwind, it only solves the "single line classes" issue.
 
 ### Is there any plans to expand the API of `tailwind-join`?
 
-> No. The main focus is to solve the "single line classes" issue. Also, the two conditional approaches - "ternary" and "logical conjunction" are also enough. Actually, you can even consider using `tailwind-join` as the replacement for `clsx` and `classnames` with more strict approach for conditionals. In this case they all are going to be written in the same style, without messing around with objects, nested arrays, etc.
+No. The main focus is to solve the "single line classes" issue. Also, the two conditional approaches - "ternary" and "logical conjunction" are also enough. Actually, you can even consider using `tailwind-join` as the replacement for `clsx` and `classnames` with more strict approach for conditionals. In this case they all are going to be written in the same style, without messing around with objects, nested arrays, etc.
+
+### Can [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) be used with `tailwind-json`?
+
+Yes! Just add this to `.vscode/settings.json`:
+
+```json
+{
+  "tailwindCSS.experimental.classRegex": [
+    ["twJoin\\(([^)]*)\\)", "'([^']*)'"]
+  ]
+}
+```
