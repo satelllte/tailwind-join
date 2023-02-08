@@ -53,6 +53,19 @@ describe('twJoin', () => {
     )
   })
 
+  it('resolves conditions with && operator', () => {    
+    const isTrue = true
+    const isFalse = false
+    expect(twJoin(
+      'p-4',
+      'border-2',
+      isTrue && 'mx-2',
+      isFalse && 'my-2',
+    )).toEqual(
+      'p-4 border-2 mx-2',
+    )
+  })
+
   it('resolves as empty string if no args, null or undefined', () => {
     expect(twJoin()).toEqual('')
     expect(twJoin(null)).toEqual('')
