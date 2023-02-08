@@ -51,6 +51,16 @@ twJoin(
 
 `tailwind-join` just focuses more on solving the Tailwind classes "hell" issue when tens of classes are placed into a single line. On the other hand, it has even smaller bundle size than `classnames` and `clsx` so it can be also intensively used for building classes conditionally using only "ternary" and "logical conjunction" operators approaches described above.
 
+### Why not just use multiple lines for classes?
+
+You can, but the HTML output is going to have redundant spaces and line breaks, and `tailwind-join` takes care of it - so the final HTML output will be always solid:
+
+```html
+<div class="m-4 px-2 py-1 bg-black">
+  ...
+</div>
+```
+
 ### Can `tailwind-join` be used for non-Tailwind classes?
 
 Absolutely! `tailwind-join` doesn't know anything about Tailwind, it only solves the "single line classes" issue.
