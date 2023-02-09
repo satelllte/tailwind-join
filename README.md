@@ -69,7 +69,7 @@ Absolutely! `tailwind-join` doesn't know anything about Tailwind, it only solves
 
 No. The main focus is to solve the "single line classes" issue. Also, the two conditional approaches - "ternary" and "logical conjunction" are also enough. Actually, you can even consider using `tailwind-join` as the replacement for `clsx` and `classnames` with more strict approach for conditionals. In this case they all are going to be written in the same style, without messing around with objects, nested arrays, etc.
 
-### Can [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) VSCode plugin be used with `tailwind-json`?
+### Can [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) VSCode plugin be used with `tailwind-join`?
 
 Yes! Just add this to `.vscode/settings.json`:
 
