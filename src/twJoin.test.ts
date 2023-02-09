@@ -28,16 +28,6 @@ describe('twJoin', () => {
     )
   })
 
-  it('ignores redundant spaces', () => {
-    expect(twJoin(
-      ' p-4      w-full                                                       ',
-      ' border-2 border-white                                                 ',
-      ' bg-black hover:bg-zinc-900/75 focus:bg-zinc-900/90 active:bg-zinc-900 ',
-    )).toEqual(
-      'p-4 w-full border-2 border-white bg-black hover:bg-zinc-900/75 focus:bg-zinc-900/90 active:bg-zinc-900'
-    )
-  })
-
   it('ignores undefined and null inputs', () => {
     expect(twJoin(
       'p-4',

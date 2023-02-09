@@ -5,9 +5,9 @@ import { twJoin } from '../src'
 bench(() => clsx(
   'mx-4 my-2 p-2',
   'bg-red-700 hover:bg-red-500',
-), 1e6, 'clsx\t')
+), 1e7, 'clsx\t')
 
 bench(() => twJoin(
   'mx-4 my-2 p-2',
   'bg-red-700 hover:bg-red-500',
-), 1e6, 'twJoin\t')
+), 1e7, 'twJoin\t')
