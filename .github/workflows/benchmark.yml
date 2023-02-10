@@ -11,6 +11,9 @@ on:
 jobs:
   benchmark:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: benchmarks
     strategy:
       matrix:
         node: [ 16, 17, 18, 19 ]
@@ -18,7 +21,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        working-directory: ./benchmarks
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
