@@ -1,0 +1,32 @@
+name: Benchmark
+
+on:
+  push:
+    branches:    
+      - main
+  pull_request:
+    branches:    
+      - main
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ 16, 17, 18, 19 ]
+    name: Benchmark on Node v${{ matrix.node }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        working-directory: ./benchmarks
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Benchmark
+        run: npm run benchmark
