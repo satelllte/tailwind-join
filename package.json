@@ -1,6 +1,6 @@
 {
   "name": "tailwind-join",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A tiny utility to join Tailwind classes",
   "keywords": [
     "tailwind-join",
