@@ -1,0 +1,16 @@
+{
+  "name": "tailwind-join-benchmarks",
+  "version": "0.1.0",
+  "description": "Benchmarks of tailwind-join",
+  "scripts": {
+    "build": "esbuild index.ts --bundle --minify --outfile=dist/index.js",
+    "benchmark": "node dist"
+  },
+  "dependencies": {
+    "@thi.ng/bench": "3.2.0",
+    "clsx": "1.2.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.17.6"
+  }
+}
