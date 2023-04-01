@@ -34,7 +34,7 @@
     "test:edge": "vitest run --coverage --environment=edge-runtime"
   },
   "devDependencies": {
-    "@edge-runtime/vm": "2.0.4",
+    "@edge-runtime/vm": "2.1.2",
     "@vitest/coverage-c8": "0.28.4",
     "jsdom": "21.1.0",
     "typescript": "4.9.5",
